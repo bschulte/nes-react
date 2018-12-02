@@ -13,15 +13,13 @@ npm install --save nes-react
 ## Usage
 
 ```tsx
-import * as React from 'react'
+import * as React from "react";
 
-import MyComponent from 'nes-react'
+import { Container } from "nes-react";
 
 class Example extends React.Component {
-  render () {
-    return (
-      <MyComponent />
-    )
+  render() {
+    return <Container>We're using containers from nes.css!</Container>;
   }
 }
 ```
