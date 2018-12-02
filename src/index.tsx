@@ -1,23 +1,12 @@
-/**
- * @class ExampleComponent
- */
+import Container from "./components/Container";
+import Button from "./components/Button";
 
-import * as React from 'react'
+import "nes.css/css/nes.css";
+import "./scss/custom.scss";
 
-import styles from './styles.css'
+export { Container, Button };
 
-export type Props = { text: string }
-
-export default class ExampleComponent extends React.Component<Props> {
-  render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
-}
+export default {
+  Container,
+  Button
+};
