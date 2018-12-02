@@ -1,21 +1,29 @@
 import React, { Component } from "react";
 
-import { Container, Button, Radios } from "nes-react";
+import { Container, Button, Radios, Checkbox } from "nes-react";
 
 import Row from "./Row";
 import Col from "./Col";
 
 export default class App extends Component {
   state = {
-    selectedRadioValue: "option1"
+    selectedRadioValue: "option1",
+    boxOneChecked: false,
+    boxTwoChecked: true
   };
 
   handleRadioSelect(value) {
     this.setState({ selectedRadioValue: value });
   }
 
+  toggleCheckBox(checkBoxName) {
+    this.setState({
+      [`${checkBoxName}Checked`]: !this.state[`${checkBoxName}Checked`]
+    });
+  }
+
   render() {
-    const { selectedRadioValue } = this.state;
+    const { selectedRadioValue, boxOneChecked, boxTwoChecked } = this.state;
 
     return (
       <div
@@ -74,6 +82,16 @@ export default class App extends Component {
               }
             ]}
             onValueChange={this.handleRadioSelect.bind(this)}
+          />
+        </Container>
+
+        {/* Checkboxes */}
+        <Container>
+          <p>Checkboxes</p>
+          <Checkbox
+            checked={boxOneChecked}
+            label="Box One"
+            onSelect={() => this.toggleCheckBox("boxOne")}
           />
         </Container>
       </div>
