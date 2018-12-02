@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Container, Button, Radios, Checkbox } from "nes-react";
+import { Container, Button, Radios, Checkbox, TextInput } from "nes-react";
 
 import Row from "./Row";
 import Col from "./Col";
@@ -9,7 +9,11 @@ export default class App extends Component {
   state = {
     selectedRadioValue: "option1",
     boxOneChecked: false,
-    boxTwoChecked: true
+    boxTwoChecked: true,
+    textInput: "",
+    successInput: "",
+    warningInput: "",
+    errorInput: ""
   };
 
   handleRadioSelect(value) {
@@ -23,7 +27,15 @@ export default class App extends Component {
   }
 
   render() {
-    const { selectedRadioValue, boxOneChecked, boxTwoChecked } = this.state;
+    const {
+      selectedRadioValue,
+      boxOneChecked,
+      boxTwoChecked,
+      textInput,
+      successInput,
+      warningInput,
+      errorInput
+    } = this.state;
 
     return (
       <div
@@ -93,6 +105,47 @@ export default class App extends Component {
             label="Box One"
             onSelect={() => this.toggleCheckBox("boxOne")}
           />
+
+          <Checkbox
+            checked={boxTwoChecked}
+            label="Box Two"
+            onSelect={() => this.toggleCheckBox("boxTwo")}
+          />
+        </Container>
+
+        {/* Text Inputs */}
+        <Container>
+          <p>Text Inputs</p>
+          <Row>
+            <Col>
+              <TextInput
+                label="Sample Label"
+                placeholder="Text placeholder"
+                value={textInput}
+                onChange={e => this.setState({ textInput: e.target.value })}
+              />
+              <TextInput
+                label="Success Input"
+                success
+                value={successInput}
+                onChange={e => this.setState({ successInput: e.target.value })}
+              />
+            </Col>
+            <Col>
+              <TextInput
+                label="Warning Input"
+                warning
+                value={warningInput}
+                onChange={e => this.setState({ warningInput: e.target.value })}
+              />
+              <TextInput
+                label="Error Input"
+                error
+                value={errorInput}
+                onChange={e => this.setState({ errorInput: e.target.value })}
+              />
+            </Col>
+          </Row>
         </Container>
       </div>
     );
