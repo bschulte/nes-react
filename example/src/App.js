@@ -1,12 +1,22 @@
 import React, { Component } from "react";
 
-import { Container, Button } from "nes-react";
+import { Container, Button, Radios } from "nes-react";
 
 import Row from "./Row";
 import Col from "./Col";
 
 export default class App extends Component {
+  state = {
+    selectedRadioValue: "option1"
+  };
+
+  handleRadioSelect(value) {
+    this.setState({ selectedRadioValue: value });
+  }
+
   render() {
+    const { selectedRadioValue } = this.state;
+
     return (
       <div
         style={{
@@ -21,8 +31,9 @@ export default class App extends Component {
           A React component library based on the awesome{" "}
           <a href="https://github.com/BcRikko/NES.css">nes.css</a>
         </h4>
+
+        {/* Containers */}
         <Container>
-          {/* Containers */}
           <p>Containers</p>
           <Row>
             <Col>
@@ -36,6 +47,7 @@ export default class App extends Component {
             </Col>
           </Row>
         </Container>
+
         {/* Buttons */}
         <Container>
           <p>Buttons</p>
@@ -44,6 +56,25 @@ export default class App extends Component {
           <Button success>Success</Button>
           <Button warning>Warning</Button>
           <Button error>Error</Button>
+        </Container>
+
+        {/* Radios */}
+        <Container>
+          <p>Radios</p>
+          <Radios
+            selectedValue={selectedRadioValue}
+            options={[
+              {
+                value: "yes",
+                label: "Yes"
+              },
+              {
+                value: "no",
+                label: "No"
+              }
+            ]}
+            onValueChange={this.handleRadioSelect.bind(this)}
+          />
         </Container>
       </div>
     );
