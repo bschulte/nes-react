@@ -119,13 +119,14 @@ export default class App extends Component {
           <Row>
             <Col>
               <TextInput
-                label="Sample Label"
+                label="Label"
                 placeholder="Text placeholder"
                 value={textInput}
                 onChange={e => this.setState({ textInput: e.target.value })}
               />
               <TextInput
-                label="Success Input"
+                label="Success"
+                labelInline
                 success
                 value={successInput}
                 onChange={e => this.setState({ successInput: e.target.value })}
@@ -133,13 +134,15 @@ export default class App extends Component {
             </Col>
             <Col>
               <TextInput
-                label="Warning Input"
+                label="Warning"
+                labelInline
                 warning
                 value={warningInput}
                 onChange={e => this.setState({ warningInput: e.target.value })}
               />
               <TextInput
-                label="Error Input"
+                label="Error"
+                labelInline
                 error
                 value={errorInput}
                 onChange={e => this.setState({ errorInput: e.target.value })}

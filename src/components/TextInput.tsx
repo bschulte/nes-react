@@ -9,6 +9,7 @@ export interface TextInputProps {
   success: boolean;
   warning: boolean;
   error: boolean;
+  labelInline: boolean;
 }
 
 export default class IApp extends React.Component<TextInputProps> {
@@ -20,10 +21,11 @@ export default class IApp extends React.Component<TextInputProps> {
       warning,
       error,
       value,
-      onChange
+      onChange,
+      labelInline
     } = this.props;
     return (
-      <div className="field">
+      <div className={classNames("field", { "is-inline": labelInline })}>
         <label>{label}</label>
         <input
           type="text"
