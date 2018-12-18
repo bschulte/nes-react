@@ -26,7 +26,7 @@ export default class Button extends React.Component<ButtonProps, {}> {
     } = this.props;
     return (
       <button
-        className={classNames("btn", {
+        className={classNames("nes-btn", {
           "is-primary": primary,
           "is-success": success,
           "is-warning": warning,

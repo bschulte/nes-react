@@ -13,12 +13,12 @@ export default class Radios extends React.Component<RadiosProps, any> {
       <div>
         {options.map(option => (
           <label
-            className="radio-group"
+            className="nes-radio-group"
             onClick={() => onValueChange(option.value)}
           >
             <input
               type="radio"
-              className="radio"
+              className="nes-radio"
               value={option.value}
               checked={option.value === selectedValue}
             />

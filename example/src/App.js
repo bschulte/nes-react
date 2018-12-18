@@ -46,6 +46,11 @@ export default class App extends Component {
           width: 1024
         }}
       >
+        <link
+          href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+          rel="stylesheet"
+        />
+
         <h1>nes-react</h1>
         <h4>
           A React component library based on the awesome{" "}

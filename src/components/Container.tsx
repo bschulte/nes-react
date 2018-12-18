@@ -16,7 +16,7 @@ export default class Container extends React.Component<ContainerProps, {}> {
     const { children, style, withTitle, dark, rounded } = this.props;
     return (
       <section
-        className={classNames("container", {
+        className={classNames("nes-container", {
           withTitle,
           "is-dark": dark,
           "is-rounded": rounded

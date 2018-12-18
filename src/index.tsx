@@ -4,7 +4,7 @@ import Radios from "./components/Radios";
 import Checkbox from "./components/Checkbox";
 import TextInput from "./components/TextInput";
 
-import "nes.css/css/nes.css";
+import "../nes.css/scss/nes.scss";
 import "./scss/custom.scss";
 
 export { Container, Button, Radios, Checkbox, TextInput };

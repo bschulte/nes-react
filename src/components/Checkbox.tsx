@@ -10,10 +10,10 @@ export default function CheckBox(props: CheckboxProps) {
   const { label, onSelect, checked } = props;
   return (
     <div>
-      <label className="checkbox-parent">
+      <label className="nes-checkbox-parent">
         <input
           type="checkbox"
-          className="checkbox"
+          className="nes-checkbox"
           checked={checked}
           onChange={onSelect}
         />
