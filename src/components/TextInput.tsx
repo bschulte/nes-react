@@ -25,14 +25,14 @@ export default class IApp extends React.Component<TextInputProps> {
       labelInline
     } = this.props;
     return (
-      <div className={classNames("field", { "is-inline": labelInline })}>
+      <div className={classNames("nes-field", { "is-inline": labelInline })}>
         <label>{label}</label>
         <input
           type="text"
           value={value}
           onChange={onChange}
           placeholder={placeholder || ""}
-          className={classNames("input", {
+          className={classNames("nes-input", {
             "is-success": success,
             "is-warning": warning,
             "is-error": error
