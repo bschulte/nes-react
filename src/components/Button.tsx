@@ -11,6 +11,7 @@ interface ButtonProps {
   success: boolean;
   warning: boolean;
   error: boolean;
+  disabled: boolean;
 }
 
 export default class Button extends React.Component<ButtonProps, {}> {
@@ -22,7 +23,8 @@ export default class Button extends React.Component<ButtonProps, {}> {
       primary,
       success,
       warning,
-      error
+      error,
+      disabled
     } = this.props;
     return (
       <button
@@ -30,7 +32,8 @@ export default class Button extends React.Component<ButtonProps, {}> {
           "is-primary": primary,
           "is-success": success,
           "is-warning": warning,
-          "is-error": error
+          "is-error": error,
+          "is-disabled": disabled
         })}
         onClick={onClick}
         style={style}

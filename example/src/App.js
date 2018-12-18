@@ -76,11 +76,22 @@ export default class App extends Component {
         {/* Buttons */}
         <Container>
           <p>Buttons</p>
-          <Button>Regular</Button>
-          <Button primary>Primary</Button>
-          <Button success>Success</Button>
-          <Button warning>Warning</Button>
-          <Button error>Error</Button>
+          <Button style={{ margin: 10 }}>Regular</Button>
+          <Button style={{ margin: 10 }} primary>
+            Primary
+          </Button>
+          <Button style={{ margin: 10 }} success>
+            Success
+          </Button>
+          <Button style={{ margin: 10 }} warning>
+            Warning
+          </Button>
+          <Button style={{ margin: 10 }} error>
+            Error
+          </Button>
+          <Button style={{ margin: 10 }} disabled>
+            Disabled
+          </Button>
         </Container>
 
         {/* Radios */}
