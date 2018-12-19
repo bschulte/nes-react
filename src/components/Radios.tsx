@@ -11,8 +11,9 @@ export default class Radios extends React.Component<RadiosProps, any> {
     const { options, selectedValue, onValueChange } = this.props;
     return (
       <div>
-        {options.map(option => (
+        {options.map((option, index) => (
           <label
+            key={index}
             className="nes-radio-group"
             onClick={() => onValueChange(option.value)}
           >
@@ -21,6 +22,7 @@ export default class Radios extends React.Component<RadiosProps, any> {
               className="nes-radio"
               value={option.value}
               checked={option.value === selectedValue}
+              onChange={() => {}}
             />
             <span>{option.label}</span>
           </label>
