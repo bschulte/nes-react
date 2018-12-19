@@ -8,6 +8,7 @@ import Avatar from "./components/Avatar";
 import Bcrikko from "./components/Bcrikko";
 import Balloon from "./components/Balloon";
 import List from "./components/List";
+import Table from "./components/Table";
 
 import "../nes.css/scss/nes.scss";
 import "./scss/custom.scss";
@@ -22,7 +23,8 @@ export {
   Avatar,
   Bcrikko,
   Balloon,
-  List
+  List,
+  Table
 };
 
 export default {
@@ -35,5 +37,6 @@ export default {
   Avatar,
   Bcrikko,
   Balloon,
-  List
+  List,
+  Table
 };
