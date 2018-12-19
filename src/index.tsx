@@ -9,6 +9,7 @@ import Bcrikko from "./components/Bcrikko";
 import Balloon from "./components/Balloon";
 import List from "./components/List";
 import Table from "./components/Table";
+import Progress from "./components/Progress";
 
 import "../nes.css/scss/nes.scss";
 import "./scss/custom.scss";
@@ -24,7 +25,8 @@ export {
   Bcrikko,
   Balloon,
   List,
-  Table
+  Table,
+  Progress
 };
 
 export default {
@@ -38,5 +40,6 @@ export default {
   Bcrikko,
   Balloon,
   List,
-  Table
+  Table,
+  Progress
 };

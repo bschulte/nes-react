@@ -11,7 +11,8 @@ import {
   Bcrikko,
   Balloon,
   List,
-  Table
+  Table,
+  Progress
 } from "nes-react";
 
 import Row from "./Row";
@@ -313,6 +314,17 @@ export default class App extends Component {
               </tr>
             </tbody>
           </Table>
+        </Container>
+
+        {/* Progress */}
+        <Container>
+          <p>Progress Bars</p>
+          <Progress value={90} max={100} />
+          <Progress value={80} max={100} primary />
+          <Progress value={70} max={100} success />
+          <Progress value={60} max={100} warning />
+          <Progress value={50} max={100} error />
+          <Progress value={40} max={100} pattern />
         </Container>
       </div>
     );
