@@ -12,7 +12,8 @@ import {
   Balloon,
   List,
   Table,
-  Progress
+  Progress,
+  Icon
 } from "nes-react";
 
 import Row from "./Row";
@@ -325,6 +326,43 @@ export default class App extends Component {
           <Progress value={60} max={100} warning />
           <Progress value={50} max={100} error />
           <Progress value={40} max={100} pattern />
+        </Container>
+
+        {/* Icons */}
+        <Container>
+          <p>Icons</p>
+          <Container title="Size and state">
+            <Icon icon="star" small />
+            <Icon icon="star" />
+            <Icon icon="star" medium />
+            <Icon icon="star" large />
+            <Icon icon="star" half large />
+            <Icon icon="star" empty large />
+            <Icon icon="star" transparent large />
+          </Container>
+
+          <Container title="Available icons">
+            {[
+              "heart",
+              "star",
+              "like",
+              "twitter",
+              "facebook",
+              "github",
+              "youtube",
+              "google",
+              "medium",
+              "twitch",
+              "reddit",
+              "whatsapp",
+              "gmail",
+              "linkedin",
+              "close",
+              "trophy"
+            ].map(icon => (
+              <Icon key={icon} icon={icon} />
+            ))}
+          </Container>
         </Container>
       </div>
     );

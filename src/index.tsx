@@ -10,6 +10,7 @@ import Balloon from "./components/Balloon";
 import List from "./components/List";
 import Table from "./components/Table";
 import Progress from "./components/Progress";
+import Icon from "./components/Icon";
 
 import "../nes.css/scss/nes.scss";
 import "./scss/custom.scss";
@@ -26,7 +27,8 @@ export {
   Balloon,
   List,
   Table,
-  Progress
+  Progress,
+  Icon
 };
 
 export default {
@@ -41,5 +43,6 @@ export default {
   Balloon,
   List,
   Table,
-  Progress
+  Progress,
+  Icon
 };
