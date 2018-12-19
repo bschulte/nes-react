@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 
-import { Container, Button, Radios, Checkbox, TextInput } from "nes-react";
+import {
+  Container,
+  Button,
+  Radios,
+  Checkbox,
+  TextInput,
+  TextArea
+} from "nes-react";
 
 import Row from "./Row";
 import Col from "./Col";
@@ -13,7 +20,8 @@ export default class App extends Component {
     textInput: "",
     successInput: "",
     warningInput: "",
-    errorInput: ""
+    errorInput: "",
+    textareaInput: ""
   };
 
   handleRadioSelect(value) {
@@ -34,7 +42,8 @@ export default class App extends Component {
       textInput,
       successInput,
       warningInput,
-      errorInput
+      errorInput,
+      textareaInput
     } = this.state;
 
     return (
@@ -132,39 +141,38 @@ export default class App extends Component {
         {/* Text Inputs */}
         <Container>
           <p>Text Inputs</p>
-          <Row>
-            <Col>
-              <TextInput
-                label="Label"
-                placeholder="Text placeholder"
-                value={textInput}
-                onChange={e => this.setState({ textInput: e.target.value })}
-              />
-              <TextInput
-                label="Success"
-                labelInline
-                success
-                value={successInput}
-                onChange={e => this.setState({ successInput: e.target.value })}
-              />
-            </Col>
-            <Col>
-              <TextInput
-                label="Warning"
-                labelInline
-                warning
-                value={warningInput}
-                onChange={e => this.setState({ warningInput: e.target.value })}
-              />
-              <TextInput
-                label="Error"
-                labelInline
-                error
-                value={errorInput}
-                onChange={e => this.setState({ errorInput: e.target.value })}
-              />
-            </Col>
-          </Row>
+          <TextInput
+            label="Label"
+            placeholder="Text placeholder"
+            value={textInput}
+            onChange={e => this.setState({ textInput: e.target.value })}
+          />
+          <TextInput
+            label="Success"
+            labelInline
+            success
+            value={successInput}
+            onChange={e => this.setState({ successInput: e.target.value })}
+          />
+          <TextInput
+            label="Warning"
+            labelInline
+            warning
+            value={warningInput}
+            onChange={e => this.setState({ warningInput: e.target.value })}
+          />
+          <TextInput
+            label="Error"
+            labelInline
+            error
+            value={errorInput}
+            onChange={e => this.setState({ errorInput: e.target.value })}
+          />
+          <TextArea
+            label="Text Area"
+            value={textareaInput}
+            onChange={e => this.setState({ textareaInput: e.target.value })}
+          />
         </Container>
       </div>
     );

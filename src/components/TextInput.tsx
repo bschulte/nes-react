@@ -12,7 +12,7 @@ export interface TextInputProps {
   labelInline: boolean;
 }
 
-export default class IApp extends React.Component<TextInputProps> {
+export default class TextInput extends React.Component<TextInputProps> {
   public render() {
     const {
       label,
