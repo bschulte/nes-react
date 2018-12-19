@@ -7,7 +7,10 @@ import {
   Checkbox,
   TextInput,
   TextArea,
-  Avatar
+  Avatar,
+  Bcrikko,
+  Balloon,
+  List
 } from "nes-react";
 
 import Row from "./Row";
@@ -60,7 +63,6 @@ export default class App extends Component {
           href="https://fonts.googleapis.com/css?family=Press+Start+2P"
           rel="stylesheet"
         />
-
         <h1>nes-react</h1>
         <h4>
           A React component library based on the awesome{" "}
@@ -77,6 +79,11 @@ export default class App extends Component {
             <Col>
               <Container rounded>Rounded</Container>
             </Col>
+            <Col>
+              <Container title="With Title">Title for this one</Container>
+            </Col>
+          </Row>
+          <Row>
             <Col>
               <Container dark>Dark</Container>
             </Col>
@@ -180,6 +187,47 @@ export default class App extends Component {
           <Avatar src="https://www.gravatar.com/avatar" rounded />
           <Avatar src="https://www.gravatar.com/avatar" medium rounded />
           <Avatar src="https://www.gravatar.com/avatar" large rounded />
+        </Container>
+
+        {/* Balloons */}
+        <Container title="Balloons">
+          <Row>
+            <Col>
+              <div style={{ display: "flex" }}>
+                <Bcrikko style={{ alignSelf: "flex-end" }} />
+                <Balloon style={{ margin: "2rem", maxWidth: "400px" }} fromLeft>
+                  Here's one from the left!
+                </Balloon>
+              </div>
+            </Col>
+            <Col>
+              <div style={{ display: "flex" }}>
+                <Balloon
+                  style={{ margin: "2rem", maxWidth: "400px" }}
+                  fromRight
+                >
+                  And one from the right!
+                </Balloon>
+                <Bcrikko style={{ alignSelf: "flex-end" }} />
+              </div>
+            </Col>
+          </Row>
+        </Container>
+
+        {/* Lists */}
+        <Container>
+          <p>Lists</p>
+          <List>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </List>
+
+          <List solid>
+            <li>Solid 1</li>
+            <li>Solid 2</li>
+            <li>Solid 3</li>
+          </List>
         </Container>
       </div>
     );
