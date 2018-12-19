@@ -6,7 +6,8 @@ import {
   Radios,
   Checkbox,
   TextInput,
-  TextArea
+  TextArea,
+  Avatar
 } from "nes-react";
 
 import Row from "./Row";
@@ -88,22 +89,12 @@ export default class App extends Component {
         {/* Buttons */}
         <Container>
           <p>Buttons</p>
-          <Button style={{ margin: 10 }}>Regular</Button>
-          <Button style={{ margin: 10 }} primary>
-            Primary
-          </Button>
-          <Button style={{ margin: 10 }} success>
-            Success
-          </Button>
-          <Button style={{ margin: 10 }} warning>
-            Warning
-          </Button>
-          <Button style={{ margin: 10 }} error>
-            Error
-          </Button>
-          <Button style={{ margin: 10 }} disabled>
-            Disabled
-          </Button>
+          <Button>Regular</Button>
+          <Button primary>Primary</Button>
+          <Button success>Success</Button>
+          <Button warning>Warning</Button>
+          <Button error>Error</Button>
+          <Button disabled>Disabled</Button>
         </Container>
 
         {/* Radios */}
@@ -176,6 +167,19 @@ export default class App extends Component {
             value={textareaInput}
             onChange={e => this.setState({ textareaInput: e.target.value })}
           />
+        </Container>
+
+        {/* Avatars */}
+        <Container>
+          <p>Avatars</p>
+          <Avatar src="https://www.gravatar.com/avatar" small />
+          <Avatar src="https://www.gravatar.com/avatar" />
+          <Avatar src="https://www.gravatar.com/avatar" medium />
+          <Avatar src="https://www.gravatar.com/avatar" large />
+          <Avatar src="https://www.gravatar.com/avatar" small rounded />
+          <Avatar src="https://www.gravatar.com/avatar" rounded />
+          <Avatar src="https://www.gravatar.com/avatar" medium rounded />
+          <Avatar src="https://www.gravatar.com/avatar" large rounded />
         </Container>
       </div>
     );
