@@ -14,7 +14,8 @@ import {
   Table,
   Progress,
   Icon,
-  Sprite
+  Sprite,
+  ControllerIcon
 } from "nes-react";
 
 import Row from "./Row";
@@ -98,8 +99,7 @@ export default class App extends Component {
         </Container>
 
         {/* Buttons */}
-        <Container>
-          <p>Buttons</p>
+        <Container title="Buttons">
           <Button>Regular</Button>
           <Button primary>Primary</Button>
           <Button success>Success</Button>
@@ -109,8 +109,7 @@ export default class App extends Component {
         </Container>
 
         {/* Radios */}
-        <Container>
-          <p>Radios</p>
+        <Container title="Radios">
           <Radios
             selectedValue={selectedRadioValue}
             options={[
@@ -128,8 +127,7 @@ export default class App extends Component {
         </Container>
 
         {/* Checkboxes */}
-        <Container>
-          <p>Checkboxes</p>
+        <Container title="Checkboxes">
           <Checkbox
             checked={boxOneChecked}
             label="Box One"
@@ -144,8 +142,7 @@ export default class App extends Component {
         </Container>
 
         {/* Text Inputs */}
-        <Container>
-          <p>Text Inputs</p>
+        <Container title="Text Inputs">
           <TextInput
             label="Label"
             placeholder="Text placeholder"
@@ -181,8 +178,7 @@ export default class App extends Component {
         </Container>
 
         {/* Avatars */}
-        <Container>
-          <p>Avatars</p>
+        <Container title="Avatars">
           <Avatar src="https://www.gravatar.com/avatar" small />
           <Avatar src="https://www.gravatar.com/avatar" />
           <Avatar src="https://www.gravatar.com/avatar" medium />
@@ -219,7 +215,7 @@ export default class App extends Component {
         </Container>
 
         {/* Lists */}
-        <Container>
+        <Container title="Lists">
           <p>Lists</p>
           <List>
             <li>Item 1</li>
@@ -235,8 +231,7 @@ export default class App extends Component {
         </Container>
 
         {/* Tables */}
-        <Container>
-          <p>Tables</p>
+        <Container title="Tables">
           <Table>
             <thead>
               <tr>
@@ -319,8 +314,7 @@ export default class App extends Component {
         </Container>
 
         {/* Progress */}
-        <Container>
-          <p>Progress Bars</p>
+        <Container title="Progress Bars">
           <Progress value={90} max={100} />
           <Progress value={80} max={100} primary />
           <Progress value={70} max={100} success />
@@ -330,8 +324,7 @@ export default class App extends Component {
         </Container>
 
         {/* Icons */}
-        <Container>
-          <p>Icons</p>
+        <Container title="Icons">
           <Container title="Size and state">
             <Icon icon="star" small />
             <Icon icon="star" />
@@ -381,6 +374,17 @@ export default class App extends Component {
             "bcrikko"
           ].map(sprite => (
             <Sprite style={{ margin: 5 }} sprite={sprite} key={sprite} />
+          ))}
+        </Container>
+
+        {/* Controller Icons */}
+        <Container title="Controller Icons">
+          {["nes", "nes-jp", "snes", "snes-jp"].map(controller => (
+            <ControllerIcon
+              style={{ margin: 5 }}
+              controller={controller}
+              key={controller}
+            />
           ))}
         </Container>
       </div>
