@@ -9,17 +9,19 @@ interface ContainerProps {
   withTitle: boolean;
   dark: boolean;
   rounded: boolean;
+  centered: boolean;
 }
 
 export default class Container extends React.Component<ContainerProps, {}> {
   render() {
-    const { children, style, withTitle, dark, rounded } = this.props;
+    const { children, style, withTitle, dark, rounded, centered } = this.props;
     return (
       <section
         className={classNames("nes-container", {
           withTitle,
           "is-dark": dark,
-          "is-rounded": rounded
+          "is-rounded": rounded,
+          "is-centered": centered
         })}
         style={style}
       >

@@ -79,6 +79,9 @@ export default class App extends Component {
             <Col>
               <Container dark>Dark</Container>
             </Col>
+            <Col>
+              <Container centered>Centered text for this one!</Container>
+            </Col>
           </Row>
         </Container>
 
