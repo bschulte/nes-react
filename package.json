@@ -1,6 +1,6 @@
 {
   "name": "nes-react",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "React component library for nes.css",
   "author": "bschulte",
   "license": "MIT",
@@ -56,5 +56,12 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "nes",
+    "react",
+    "nes.css",
+    "component library",
+    "components"
   ]
 }
