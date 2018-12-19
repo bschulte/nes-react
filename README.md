@@ -36,6 +36,14 @@ class Example extends React.Component {
 }
 ```
 
+## Development
+
+`git clone --recursive git@github.com:bschulte/nes-react.git`
+
+`npm install` in both the root folder and in /example.
+
+`npm run dev` then also in both the root folder and in /example.
+
 ## License
 
 MIT © [bschulte](https://github.com/bschulte)
