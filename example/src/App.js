@@ -293,6 +293,26 @@ export default class App extends Component {
               </tr>
             </tbody>
           </Table>
+          <div style={{ height: 20 }} />
+          <Table bordered centered dark style={{ width: 700 }}>
+            <thead>
+              <tr>
+                <th>Table dark</th>
+                <th>Table dark</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Row 1 Cell 1</td>
+                <td>Row 1 Cell 2</td>
+              </tr>
+
+              <tr>
+                <td>Row 2 Cell 1</td>
+                <td>Row 2 Cell 2</td>
+              </tr>
+            </tbody>
+          </Table>
         </Container>
       </div>
     );
