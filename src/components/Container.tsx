@@ -6,7 +6,7 @@ export type Props = { text: string };
 interface ContainerProps {
   children: any;
   style: any;
-  withTitle: boolean;
+  title: string;
   dark: boolean;
   rounded: boolean;
   centered: boolean;
@@ -14,17 +14,18 @@ interface ContainerProps {
 
 export default class Container extends React.Component<ContainerProps, {}> {
   render() {
-    const { children, style, withTitle, dark, rounded, centered } = this.props;
+    const { children, style, dark, rounded, centered, title } = this.props;
     return (
       <section
         className={classNames("nes-container", {
-          withTitle,
+          "with-title": title,
           "is-dark": dark,
           "is-rounded": rounded,
           "is-centered": centered
         })}
         style={style}
       >
+        {title && <h2 className="title">{title}</h2>}
         {children}
       </section>
     );
