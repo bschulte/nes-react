@@ -10,6 +10,10 @@
 npm install --save nes-react
 ```
 
+## Demo
+
+https://bschulte.github.io/nes-react/
+
 ## Usage
 
 If you want to use the default font family for nes.css (Press Start 2P), make sure to include that in your app in whatever way you choose.
