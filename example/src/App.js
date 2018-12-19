@@ -8,7 +8,6 @@ import {
   TextInput,
   TextArea,
   Avatar,
-  Bcrikko,
   Balloon,
   List,
   Table,
