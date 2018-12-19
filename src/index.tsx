@@ -11,6 +11,7 @@ import List from "./components/List";
 import Table from "./components/Table";
 import Progress from "./components/Progress";
 import Icon from "./components/Icon";
+import Sprite from "./components/Sprite";
 
 import "../nes.css/scss/nes.scss";
 import "./scss/custom.scss";
@@ -28,7 +29,8 @@ export {
   List,
   Table,
   Progress,
-  Icon
+  Icon,
+  Sprite
 };
 
 export default {
@@ -44,5 +46,6 @@ export default {
   List,
   Table,
   Progress,
-  Icon
+  Icon,
+  Sprite
 };

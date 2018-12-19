@@ -13,7 +13,8 @@ import {
   List,
   Table,
   Progress,
-  Icon
+  Icon,
+  Sprite
 } from "nes-react";
 
 import Row from "./Row";
@@ -363,6 +364,24 @@ export default class App extends Component {
               <Icon key={icon} icon={icon} />
             ))}
           </Container>
+        </Container>
+
+        <Container title="Sprites">
+          {[
+            "octocat",
+            "mario",
+            "ash",
+            "pokeball",
+            "bulbasaur",
+            "charmander",
+            "squirtle",
+            "smartphone",
+            "phone",
+            "kirby",
+            "bcrikko"
+          ].map(sprite => (
+            <Sprite style={{ margin: 5 }} sprite={sprite} key={sprite} />
+          ))}
         </Container>
       </div>
     );
