@@ -10,6 +10,7 @@ export interface TextInputProps {
   warning: boolean;
   error: boolean;
   labelInline: boolean;
+  style: any;
 }
 
 export default class TextInput extends React.Component<TextInputProps> {
@@ -22,7 +23,8 @@ export default class TextInput extends React.Component<TextInputProps> {
       error,
       value,
       onChange,
-      labelInline
+      labelInline,
+      style
     } = this.props;
     return (
       <div className={classNames("nes-field", { "is-inline": labelInline })}>
@@ -37,6 +39,7 @@ export default class TextInput extends React.Component<TextInputProps> {
             "is-warning": warning,
             "is-error": error
           })}
+          style={style}
         />
       </div>
     );

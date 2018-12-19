@@ -9,11 +9,12 @@ export interface TextInputProps {
   warning: boolean;
   error: boolean;
   labelInline: boolean;
+  style: any;
 }
 
 export default class TextArea extends React.Component<TextInputProps> {
   public render() {
-    const { label, value, onChange } = this.props;
+    const { label, value, onChange, style } = this.props;
     return (
       <div>
         {label && <label>{label}</label>}
@@ -21,6 +22,7 @@ export default class TextArea extends React.Component<TextInputProps> {
           value={value}
           onChange={onChange}
           className={"nes-textarea"}
+          style={style}
         />
       </div>
     );

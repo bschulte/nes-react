@@ -7,11 +7,12 @@ export interface AvatarProps {
   large: boolean;
   rounded: boolean;
   src: string;
+  style: any;
 }
 
 export default class Avatar extends React.Component<AvatarProps, any> {
   public render() {
-    const { src, small, medium, large, rounded } = this.props;
+    const { src, small, medium, large, rounded, style } = this.props;
     return (
       <img
         src={src}
@@ -21,6 +22,7 @@ export default class Avatar extends React.Component<AvatarProps, any> {
           "is-large": large,
           "is-rounded": rounded
         })}
+        style={style}
       />
     );
   }

@@ -5,7 +5,6 @@ import Checkbox from "./components/Checkbox";
 import TextInput from "./components/TextInput";
 import TextArea from "./components/TextArea";
 import Avatar from "./components/Avatar";
-import Bcrikko from "./components/Bcrikko";
 import Balloon from "./components/Balloon";
 import List from "./components/List";
 import Table from "./components/Table";
@@ -25,7 +24,6 @@ export {
   TextInput,
   TextArea,
   Avatar,
-  Bcrikko,
   Balloon,
   List,
   Table,
@@ -43,7 +41,6 @@ export default {
   TextInput,
   TextArea,
   Avatar,
-  Bcrikko,
   Balloon,
   List,
   Table,

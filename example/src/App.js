@@ -194,7 +194,7 @@ export default class App extends Component {
           <Row>
             <Col>
               <div style={{ display: "flex" }}>
-                <Bcrikko style={{ alignSelf: "flex-end" }} />
+                <Sprite sprite="bcrikko" style={{ alignSelf: "flex-end" }} />
                 <Balloon style={{ margin: "2rem", maxWidth: "400px" }} fromLeft>
                   Here's one from the left!
                 </Balloon>
@@ -208,7 +208,7 @@ export default class App extends Component {
                 >
                   And one from the right!
                 </Balloon>
-                <Bcrikko style={{ alignSelf: "flex-end" }} />
+                <Sprite sprite="bcrikko" style={{ alignSelf: "flex-end" }} />
               </div>
             </Col>
           </Row>
