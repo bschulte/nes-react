@@ -48,6 +48,9 @@ class Example extends React.Component {
 
 `npm run dev` then also in both the root folder and in /example.
 
+## See Also
+Check out https://github.com/Divoolej/react-select-nes-css-theme for making the popular [react-select](https://github.com/JedWatson/react-select) fit in with nes.css!
+
 ## License
 
 MIT © [bschulte](https://github.com/bschulte)
