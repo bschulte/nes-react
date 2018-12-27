@@ -2,12 +2,12 @@ import * as React from "react";
 import classNames from "classnames";
 
 export interface AvatarProps {
-  small: boolean;
-  medium: boolean;
-  large: boolean;
-  rounded: boolean;
+  small?: boolean;
+  medium?: boolean;
+  large?: boolean;
+  rounded?: boolean;
   src: string;
-  style: any;
+  style?: any;
 }
 
 export default class Avatar extends React.Component<AvatarProps, any> {
