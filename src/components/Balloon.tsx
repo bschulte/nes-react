@@ -2,9 +2,9 @@ import * as React from "react";
 import classNames from "classnames";
 
 export interface BalloonProps {
-  fromLeft: boolean;
-  fromRight: boolean;
-  style: any;
+  fromLeft?: boolean;
+  fromRight?: boolean;
+  style?: any;
 }
 
 export default class Balloon extends React.Component<BalloonProps, any> {
