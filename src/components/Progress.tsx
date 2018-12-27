@@ -2,14 +2,14 @@ import * as React from "react";
 import classNames from "classnames";
 
 export interface ProgressProps {
-  style: any;
+  style?: any;
   value: number;
   max: number;
-  primary: boolean;
-  success: boolean;
-  warning: boolean;
-  error: boolean;
-  pattern: boolean;
+  primary?: boolean;
+  success?: boolean;
+  warning?: boolean;
+  error?: boolean;
+  pattern?: boolean;
 }
 
 export default class Progress extends React.Component<ProgressProps, any> {
