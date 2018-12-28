@@ -1,4 +1,5 @@
 import * as React from "react";
+import classNames from "classnames";
 
 export interface SpriteProps {
   sprite:
@@ -13,12 +14,11 @@ export interface SpriteProps {
     | "phone"
     | "kirby"
     | "bcrikko";
-  style?: any;
+  className?: string;
 }
 
-export default class Sprite extends React.Component<SpriteProps, any> {
-  public render() {
-    const { style, sprite } = this.props;
-    return <i style={style} className={`nes-${sprite}`} />;
-  }
-}
+const Sprite: React.SFC<SpriteProps> = ({ sprite, className, ...other }) => (
+  <i className={classNames(className, `nes-${sprite}`)} {...other} />
+);
+
+export default Sprite;
