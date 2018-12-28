@@ -1,15 +1,15 @@
 import * as React from "react";
 
 export interface TextInputProps {
-  label: string;
-  placeholder: string;
-  value: string;
-  onChange: () => void;
-  success: boolean;
-  warning: boolean;
-  error: boolean;
-  labelInline: boolean;
-  style: any;
+  label?: string;
+  placeholder?: string;
+  value?: string;
+  onChange?: () => void;
+  success?: boolean;
+  warning?: boolean;
+  error?: boolean;
+  labelInline?: boolean;
+  style?: any;
 }
 
 export default class TextArea extends React.Component<TextInputProps> {
