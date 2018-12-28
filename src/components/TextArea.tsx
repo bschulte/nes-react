@@ -1,4 +1,5 @@
 import * as React from "react";
+import classNames from 'classnames'
 
 export interface TextInputProps {
   label?: string;
@@ -14,14 +15,19 @@ export interface TextInputProps {
 
 export default class TextArea extends React.Component<TextInputProps> {
   public render() {
-    const { label, value, onChange, style } = this.props;
+    const { label, value, onChange, style, success, warning, error, placeholder, labelInline } = this.props;
     return (
-      <div>
+      <div className={classNames("nes-field", { "is-inline": labelInline })} >
         {label && <label>{label}</label>}
         <textarea
           value={value}
           onChange={onChange}
-          className={"nes-textarea"}
+          className={classNames("nes-textarea",{
+            "is-success": success,
+            "is-warning": warning,
+            "is-error": error
+          })}
+          placeholder={placeholder}
           style={style}
         />
       </div>
