@@ -2,15 +2,15 @@ import * as React from "react";
 import classNames from "classnames";
 
 export interface TextInputProps {
-  label: string;
-  placeholder: string;
-  value: string;
-  onChange: () => void;
-  success: boolean;
-  warning: boolean;
-  error: boolean;
-  labelInline: boolean;
-  style: any;
+  label?: string;
+  placeholder?: string;
+  value?: string;
+  onChange?: () => void;
+  success?: boolean;
+  warning?: boolean;
+  error?: boolean;
+  labelInline?: boolean;
+  style?: any;
 }
 
 export default class TextInput extends React.Component<TextInputProps> {
@@ -28,7 +28,7 @@ export default class TextInput extends React.Component<TextInputProps> {
     } = this.props;
     return (
       <div className={classNames("nes-field", { "is-inline": labelInline })}>
-        <label>{label}</label>
+        {label && <label>{label}</label>}
         <input
           type="text"
           value={value}
