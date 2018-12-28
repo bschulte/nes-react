@@ -1,10 +1,10 @@
 import * as React from "react";
 
 export interface CheckboxProps {
-  checked: boolean;
-  label: string;
-  onSelect: () => void;
-  style: any;
+  checked?: boolean;
+  label?: string;
+  onSelect?: () => void;
+  style?: any;
 }
 
 export default function CheckBox(props: CheckboxProps) {

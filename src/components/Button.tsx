@@ -5,13 +5,13 @@ export type Props = { text: string };
 
 interface ButtonProps {
   children: any;
-  onClick: () => void;
-  style: any;
-  primary: boolean;
-  success: boolean;
-  warning: boolean;
-  error: boolean;
-  disabled: boolean;
+  onClick?: () => void;
+  style?: any;
+  primary?: boolean;
+  success?: boolean;
+  warning?: boolean;
+  error?: boolean;
+  disabled?: boolean;
 }
 
 export default class Button extends React.Component<ButtonProps, {}> {

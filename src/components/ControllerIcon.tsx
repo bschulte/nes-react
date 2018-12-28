@@ -2,7 +2,7 @@ import * as React from "react";
 
 export interface ControllerIconProps {
   controller: "snes" | "snes-jp" | "nes" | "nes-jp";
-  style: any;
+  style?: any;
 }
 
 export default class ControllerIcon extends React.Component<

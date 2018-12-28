@@ -19,13 +19,13 @@ export interface IconProps {
     | "linkedin"
     | "close"
     | "trophy";
-  small: boolean;
-  medium: boolean;
-  large: boolean;
-  empty: boolean;
-  transparent: boolean;
-  half: boolean;
-  style: any;
+  small?: boolean;
+  medium?: boolean;
+  large?: boolean;
+  empty?: boolean;
+  transparent?: boolean;
+  half?: boolean;
+  style?: any;
 }
 
 export default class Icon extends React.Component<IconProps, any> {

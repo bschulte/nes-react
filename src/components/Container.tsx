@@ -5,11 +5,11 @@ export type Props = { text: string };
 
 interface ContainerProps {
   children: any;
-  style: any;
-  title: string;
-  dark: boolean;
-  rounded: boolean;
-  centered: boolean;
+  style?: any;
+  title?: string;
+  dark?: boolean;
+  rounded?: boolean;
+  centered?: boolean;
 }
 
 export default class Container extends React.Component<ContainerProps, {}> {
