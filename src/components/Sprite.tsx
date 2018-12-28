@@ -13,7 +13,7 @@ export interface SpriteProps {
     | "phone"
     | "kirby"
     | "bcrikko";
-  style: any;
+  style?: any;
 }
 
 export default class Sprite extends React.Component<SpriteProps, any> {

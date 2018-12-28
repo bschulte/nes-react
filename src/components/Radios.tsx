@@ -4,7 +4,7 @@ export interface RadiosProps {
   options: Array<{ value: string; label: string }>;
   selectedValue: string;
   onValueChange: (value: string) => void;
-  style: any;
+  style?: any;
 }
 
 export default class Radios extends React.Component<RadiosProps, any> {

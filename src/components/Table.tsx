@@ -2,10 +2,10 @@ import * as React from "react";
 import classNames from "classnames";
 
 export interface TableProps {
-  bordered: boolean;
-  centered: boolean;
-  dark: boolean;
-  style: any;
+  bordered?: boolean;
+  centered?: boolean;
+  dark?: boolean;
+  style?: any;
 }
 
 export default class Table extends React.Component<TableProps, any> {
