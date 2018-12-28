@@ -1,7 +1,7 @@
 import * as React from "react";
 import classNames from "classnames";
 
-interface ContainerProps {
+export interface ContainerProps {
   children: React.ReactNode;
   title?: string;
   dark?: boolean;
