@@ -4,22 +4,19 @@ import classNames from "classnames";
 export interface BalloonProps {
   fromLeft?: boolean;
   fromRight?: boolean;
-  style?: any;
+  className?: string;
 }
 
-export default class Balloon extends React.Component<BalloonProps, any> {
-  public render() {
-    const { fromLeft, fromRight, children, style } = this.props;
-    return (
-      <div
-        className={classNames("nes-balloon", {
-          "from-left": fromLeft,
-          "from-right": fromRight
-        })}
-        style={style}
-      >
-        {children}
-      </div>
-    );
-  }
-}
+const Balloon: React.SFC<BalloonProps> = ({ fromLeft, fromRight, children, className, ...other }) => (
+  <div
+    className={classNames(className, "nes-balloon", {
+      "from-left": fromLeft,
+      "from-right": fromRight
+    })}
+    {...other}
+  >
+    {children}
+  </div>
+)
+
+export default Balloon;
