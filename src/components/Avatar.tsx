@@ -7,23 +7,20 @@ export interface AvatarProps {
   large?: boolean;
   rounded?: boolean;
   src: string;
-  style?: any;
+  className: string;
 }
 
-export default class Avatar extends React.Component<AvatarProps, any> {
-  public render() {
-    const { src, small, medium, large, rounded, style } = this.props;
-    return (
-      <img
-        src={src}
-        className={classNames("nes-avatar", {
-          "is-small": small,
-          "is-medium": medium,
-          "is-large": large,
-          "is-rounded": rounded
-        })}
-        style={style}
-      />
-    );
-  }
-}
+const Avatar: React.SFC<AvatarProps> = ({ src, small, medium, large, rounded, className, ...other }) => (
+  <img
+    src={src}
+    className={classNames(className, "nes-avatar", {
+      "is-small": small,
+      "is-medium": medium,
+      "is-large": large,
+      "is-rounded": rounded
+    })}
+    {...other}
+  />
+)
+
+export default Avatar;
