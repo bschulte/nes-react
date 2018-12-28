@@ -1,7 +1,7 @@
 import * as React from "react";
 import classNames from 'classnames'
 
-export interface TextInputProps {
+export interface TextAreaProps {
   label?: string;
   placeholder?: string;
   value?: string;
@@ -10,27 +10,24 @@ export interface TextInputProps {
   warning?: boolean;
   error?: boolean;
   labelInline?: boolean;
-  style?: any;
+  className?: string;
 }
 
-export default class TextArea extends React.Component<TextInputProps> {
-  public render() {
-    const { label, value, onChange, style, success, warning, error, placeholder, labelInline } = this.props;
-    return (
-      <div className={classNames("nes-field", { "is-inline": labelInline })} >
-        {label && <label>{label}</label>}
-        <textarea
-          value={value}
-          onChange={onChange}
-          className={classNames("nes-textarea",{
-            "is-success": success,
-            "is-warning": warning,
-            "is-error": error
-          })}
-          placeholder={placeholder}
-          style={style}
-        />
-      </div>
-    );
-  }
-}
+const TextArea: React.SFC<TextAreaProps> = ({ label, value, onChange, success, warning, error, placeholder, labelInline, ...other }) => (
+  <div className={classNames("nes-field", { "is-inline": labelInline })} >
+    {label && <label>{label}</label>}
+    <textarea
+      value={value}
+      onChange={onChange}
+      className={classNames("nes-textarea",{
+        "is-success": success,
+        "is-warning": warning,
+        "is-error": error
+      })}
+      placeholder={placeholder}
+      {...other}
+    />
+  </div>
+);
+
+export default TextArea;
