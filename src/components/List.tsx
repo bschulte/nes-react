@@ -3,22 +3,20 @@ import classNames from "classnames";
 
 export interface ListProps {
   solid?: boolean;
-  style?: any;
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default class List extends React.Component<ListProps, any> {
-  public render() {
-    const { solid, style, children } = this.props;
-    return (
-      <ul
-        className={classNames("nes-list", {
-          "is-circle": !solid,
-          "is-disc": solid
-        })}
-        style={style}
-      >
-        {children}
-      </ul>
-    );
-  }
-}
+const List: React.SFC<ListProps> = ({ children, solid, className, ...other }) => (
+  <ul
+    className={classNames(className, "nes-list", {
+      "is-circle": !solid,
+      "is-disc": solid
+    })}
+    {...other}
+  >
+    {children}
+  </ul>
+);
+
+export default List;

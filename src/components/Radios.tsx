@@ -1,35 +1,33 @@
 import * as React from "react";
+import classNames from "classnames";
 
 export interface RadiosProps {
   options: Array<{ value: string; label: string }>;
   selectedValue: string;
   onValueChange: (value: string) => void;
-  style?: any;
+  className?: string;
 }
 
-export default class Radios extends React.Component<RadiosProps, any> {
-  public render() {
-    const { options, selectedValue, onValueChange, style } = this.props;
-    return (
-      <div>
-        {options.map((option, index) => (
-          <label
-            key={index}
-            className="nes-radio-group"
-            onClick={() => onValueChange(option.value)}
-          >
-            <input
-              type="radio"
-              className="nes-radio"
-              value={option.value}
-              checked={option.value === selectedValue}
-              onChange={() => {}}
-              style={style}
-            />
-            <span>{option.label}</span>
-          </label>
-        ))}
-      </div>
-    );
-  }
-}
+const Radios: React.SFC<RadiosProps> = ({ className, options, selectedValue, onValueChange, ...other }) => (
+  <div>
+    {options.map((option, index) => (
+      <label
+        key={index}
+        className="nes-radio-group"
+        onClick={() => onValueChange(option.value)}
+      >
+        <input
+          type="radio"
+          className={classNames(className, "nes-radio")}
+          value={option.value}
+          checked={option.value === selectedValue}
+          onChange={() => {}}
+          {...other}
+        />
+        <span>{option.label}</span>
+      </label>
+    ))}
+  </div>
+);
+
+export default Radios

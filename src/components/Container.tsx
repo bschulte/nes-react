@@ -1,33 +1,28 @@
 import * as React from "react";
 import classNames from "classnames";
 
-export type Props = { text: string };
-
-interface ContainerProps {
-  children: any;
-  style?: any;
+export interface ContainerProps {
+  children: React.ReactNode;
   title?: string;
   dark?: boolean;
   rounded?: boolean;
   centered?: boolean;
+  className?: boolean;
 }
 
-export default class Container extends React.Component<ContainerProps, {}> {
-  render() {
-    const { children, style, dark, rounded, centered, title } = this.props;
-    return (
-      <section
-        className={classNames("nes-container", {
-          "with-title": title,
-          "is-dark": dark,
-          "is-rounded": rounded,
-          "is-centered": centered
-        })}
-        style={style}
-      >
-        {title && <h2 className="title">{title}</h2>}
-        {children}
-      </section>
-    );
-  }
-}
+const Container: React.SFC<ContainerProps> = ({ children, className, dark, rounded, centered, title, ...other }) => (
+  <section
+    className={classNames(className, "nes-container", {
+      "with-title": title,
+      "is-dark": dark,
+      "is-rounded": rounded,
+      "is-centered": centered
+    })}
+    {...other}
+  >
+    {title && <h2 className="title">{title}</h2>}
+    {children}
+  </section>
+);
+
+export default Container;

@@ -1,26 +1,27 @@
 import * as React from "react";
+import classNames from "classnames";
 
 export interface CheckboxProps {
   checked?: boolean;
   label?: string;
   onSelect?: () => void;
-  style?: any;
+  className?: string;
 }
 
-export default function CheckBox(props: CheckboxProps) {
-  const { label, onSelect, checked, style } = props;
-  return (
-    <div>
-      <label className="nes-checkbox-parent">
-        <input
-          type="checkbox"
-          className="nes-checkbox"
-          checked={checked}
-          onChange={onSelect}
-          style={style}
-        />
-        <span>{label}</span>
-      </label>
-    </div>
-  );
-}
+
+const Checkbox: React.SFC<CheckboxProps> = ({ label, onSelect, checked, className, ...other }) => (
+  <div>
+    <label className="nes-checkbox-parent">
+      <input
+        type="checkbox"
+        className={classNames(className, "nes-checkbox")}
+        checked={checked}
+        onChange={onSelect}
+        {...other}
+      />
+      <span>{label}</span>
+    </label>
+  </div>
+);
+
+export default Checkbox;

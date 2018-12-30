@@ -5,23 +5,21 @@ export interface TableProps {
   bordered?: boolean;
   centered?: boolean;
   dark?: boolean;
-  style?: any;
+  chilren?: React.ReactNode;
+  className?: string;
 }
 
-export default class Table extends React.Component<TableProps, any> {
-  public render() {
-    const { bordered, centered, style, children, dark } = this.props;
-    return (
-      <table
-        className={classNames("nes-table", {
-          "is-bordered": bordered,
-          "is-centered": centered,
-          "is-dark": dark
-        })}
-        style={style}
-      >
-        {children}
-      </table>
-    );
-  }
-}
+const Table: React.SFC<TableProps> = ({ bordered, centered, dark, children, className, ...other }) => (
+  <table
+    className={classNames(className, "nes-table", {
+      "is-bordered": bordered,
+      "is-centered": centered,
+      "is-dark": dark
+    })}
+    {...other}
+  >
+    {children}
+  </table>
+);
+
+export default Table;

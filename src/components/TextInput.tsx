@@ -10,38 +10,36 @@ export interface TextInputProps {
   warning?: boolean;
   error?: boolean;
   labelInline?: boolean;
-  style?: any;
+  className?: string;
 }
 
-export default class TextInput extends React.Component<TextInputProps> {
-  public render() {
-    const {
-      label,
-      placeholder,
-      success,
-      warning,
-      error,
-      value,
-      onChange,
-      labelInline,
-      style
-    } = this.props;
-    return (
-      <div className={classNames("nes-field", { "is-inline": labelInline })}>
-        {label && <label>{label}</label>}
-        <input
-          type="text"
-          value={value}
-          onChange={onChange}
-          placeholder={placeholder || ""}
-          className={classNames("nes-input", {
-            "is-success": success,
-            "is-warning": warning,
-            "is-error": error
-          })}
-          style={style}
-        />
-      </div>
-    );
-  }
-}
+const TextInput: React.SFC<TextInputProps> = ({
+  label,
+  placeholder,
+  success,
+  warning,
+  error,
+  value,
+  onChange,
+  labelInline,
+  className,
+  ...other
+}) => (
+  <div className={classNames("nes-field", { "is-inline": labelInline })}>
+    {label && <label>{label}</label>}
+    <input
+      type="text"
+      value={value}
+      onChange={onChange}
+      placeholder={placeholder}
+      className={classNames(className, "nes-input", {
+        "is-success": success,
+        "is-warning": warning,
+        "is-error": error
+      })}
+      {...other}
+    />
+  </div>
+);
+
+export default TextInput;
