@@ -13,7 +13,9 @@ export interface TextInputProps {
   className?: string;
 }
 
-const TextInput: React.SFC<TextInputProps> = ({
+const TextInput: React.SFC<
+  TextInputProps & React.HTMLProps<HTMLInputElement>
+> = ({
   label,
   placeholder,
   success,
